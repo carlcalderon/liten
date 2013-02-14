@@ -1,0 +1,5 @@
+#! /usr/local/bin/node
+
+var program = require('./../lib/cli');
+
+program.interpret(process.argv);
