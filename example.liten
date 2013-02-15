@@ -1,6 +1,6 @@
 <!doctype html>
-html#foo@lang="en"
-  head
+html#    foo@lang="en"
+  head // head tag
     link@type="text/css"@rel="stylesheet"@href="css/master.css"
     script@type="text/javascript"
       ```
