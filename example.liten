@@ -1,14 +1,50 @@
+=portfolioFigure($title, $imageURL)
+  figure
+    img@src=$imageURL
+    figurecaption
+      h1:$title
+
 <!doctype html>
-html#    foo@lang="en"
-  head // head tag
-    link@type="text/css"@rel="stylesheet"@href="css/master.css"
-    script@type="text/javascript"
+html#foo@lang="en"
+  head // end of line comments works
+
+    link
+      @type="text/css"
+      @rel="stylesheet"
+      @href="css/master.css"
+
+    script
+
+      @async = true
+      @language = "javascript"
+
+      ```
+      function init() {
+        alert('start');
+      }
+      ```
+
+    script@type="text/javascript" // uncompressed markup (this case JS)
       ```
       function foo() {
         return "bar";
       }
       ```
   body
+
+    @onload = "init()"
+    
     section#content
-      h1:"A headline"
+
+      h1: "A headline"
+
       p.ingress.stronger:"lorem ipsum dolor sit amet"
+
+      // DOM multiplier and inline terminator breaks
+      
+      figure * 3 \ img \ figurecaption:"testing lines"
+
+    section#portfolio
+      +portfolioFigure("Lorem", "path/to/image1.png")
+      +portfolioFigure("Ipsum", "path/to/image2.png")
+      +portfolioFigure("Dolor", "path/to/image3.png")
