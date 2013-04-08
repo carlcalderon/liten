@@ -1,3 +1,6 @@
+@mixin italic($text)
+  i:$text
+
 =portfolioFigure($title, $imageURL)
   figure
     img@src=$imageURL
@@ -9,9 +12,17 @@ html#foo@lang="en"
   head // end of line comments works
 
     link
-      @type="text/css"
-      @rel="stylesheet"
-      @href="css/master.css"
+      @type = "text/css"
+      @rel  = "stylesheet"
+      @href = "css/master.css"
+
+    style@type="text/css"
+      ```
+      body {
+        color: white;
+        background: black;
+      }
+      ```
 
     script
 
@@ -38,7 +49,8 @@ html#foo@lang="en"
 
       h1: "A headline"
 
-      p.ingress.stronger:"lorem ipsum dolor sit amet"
+      p.ingress.stronger.this-is-it:"lorem ipsum dolor sit amet"
+        @include italic("some italic text")
 
       // DOM multiplier and inline terminator breaks
       
