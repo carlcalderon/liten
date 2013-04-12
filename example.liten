@@ -50,7 +50,7 @@ html#foo@lang="en"
   body
 
     @onload = "init()"
-    
+
     section#content
 
       h1: "A headline"
@@ -59,7 +59,7 @@ html#foo@lang="en"
         @include italic("some italic text")
 
       // DOM multiplier and inline terminator breaks
-      
+
       figure * 3 \ p:"testing lines"
 
     section#portfolio

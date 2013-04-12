@@ -1,0 +1,31 @@
+=portfolioFigure($title, $imageURL)
+  figure
+    @data-id = 1
+    @data-title = $title
+    img
+      @title=$title
+      @alt=$title
+      @src=$imageURL
+    :"The title: $title"
+
+should place :"The title: $title" as content child of <figure> and not <img>.
+
+
+multipliers are still void tokens
+
+
+single line content tokens should be placed on one tag-line if no other siblings
+exist.
+
+
+output should only indent and row-split if -x flag is set
+
+
+test uncompressed content placements
+
+
+normalize unquotes through mixins
+
+
+test nested mixins
+
