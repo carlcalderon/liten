@@ -5,13 +5,18 @@
   figure
     @data-id = 1
     @data-title = $title
-    img@src=$imageURL
-    figurecaption
-      h1:$title
+    img
+      @title=$title
+      @alt=$title
+      @src=$imageURL
+    p:"The title: $title"
 
 <!doctype html>
 html#foo@lang="en"
   head // end of line comments works
+
+    meta@charset="utf8"
+    title:"Liten Test"
 
     link
       @type = "text/css"
@@ -28,8 +33,7 @@ html#foo@lang="en"
 
     script
 
-      @async = true
-      @language = "javascript"
+      @type = "text/javascript"
 
       ```
       function init() {
@@ -56,7 +60,7 @@ html#foo@lang="en"
 
       // DOM multiplier and inline terminator breaks
       
-      figure * 3 \ img \ figurecaption:"testing lines"
+      figure * 3 \ p:"testing lines"
 
     section#portfolio
       +portfolioFigure("Lorem", "path/to/image1.png")
