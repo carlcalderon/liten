@@ -3,6 +3,8 @@
 
 =portfolioFigure($title, $imageURL)
   figure
+    @data-id = 1
+    @data-title = $title
     img@src=$imageURL
     figurecaption
       h1:$title
