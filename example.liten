@@ -9,7 +9,7 @@
       @title=$title
       @alt=$title
       @src=$imageURL
-    p:"The title: $title"
+    :"The title: $title"
 
 <!doctype html>
 html#foo@lang="en"

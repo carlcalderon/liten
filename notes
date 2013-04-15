@@ -1,16 +1,3 @@
-=portfolioFigure($title, $imageURL)
-  figure
-    @data-id = 1
-    @data-title = $title
-    img
-      @title=$title
-      @alt=$title
-      @src=$imageURL
-    :"The title: $title"
-
-should place :"The title: $title" as content child of <figure> and not <img>.
-
-
 multipliers are still void tokens
 
 
