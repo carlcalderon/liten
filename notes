@@ -1,10 +1,6 @@
 multipliers are still void tokens
 
 
-single line content tokens should be placed on one tag-line if no other siblings
-exist.
-
-
 output should only indent and row-split if -x flag is set
 
 
