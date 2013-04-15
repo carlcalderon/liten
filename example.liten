@@ -10,6 +10,7 @@
       @alt=$title
       @src=$imageURL
     :"The title: $title"
+    +italic($title)
 
 <!doctype html>
 html#foo@lang="en"
