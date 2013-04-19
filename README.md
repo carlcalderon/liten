@@ -6,7 +6,7 @@ A HTML pre-processor with a sassy flavor.
 
 **TBD**
 
-~~liten is available from the node package manager (npm).~~
+liten is available from the node package manager (npm).
 
     npm install -g liten
 
