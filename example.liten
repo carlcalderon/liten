@@ -52,6 +52,11 @@ html#foo@lang="en"
 
     @onload = "init()"
 
+    input
+      @type = "text"
+    br
+    br
+
     section#content
 
       h1: "A headline"
