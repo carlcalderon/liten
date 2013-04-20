@@ -20,7 +20,7 @@ Carl Calderon: [@carlcalderon][twitter]
 
 ## License
 
-stil.js is licensed under [Apache License, Version 2.0][apache]
+liten is licensed under [Apache License, Version 2.0][apache]
 
 [twitter]:https://twitter.com/carlcalderon
 [apache]:http://www.apache.org/licenses/LICENSE-2.0.html
