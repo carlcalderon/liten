@@ -1,6 +1,6 @@
 {
   "name": "liten",
-  "version": "1.0.1-1",
+  "version": "1.0.1-2",
   "homepage": "http://github.com/carlcalderon/liten",
   "description": "HTML pre-processor with a sassy flavor.",
   "keywords": [
@@ -10,7 +10,7 @@
     "mixin"
   ],
   "bin": {
-    "liten": "node ./bin/liten"
+    "liten": "./bin/liten"
   },
   "main": "./lib/liten.js",
   "author": {
