@@ -1,6 +1,6 @@
 {
   "name": "liten",
-  "version": "1.0.1-2",
+  "version": "1.0.2-0",
   "homepage": "http://github.com/carlcalderon/liten",
   "description": "HTML pre-processor with a sassy flavor.",
   "keywords": [
