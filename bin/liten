@@ -1,5 +1,3 @@
-#! /usr/local/bin/node
+#!/usr/bin/env node
 
-var program = require('./../lib/cli');
-
-program.interpret(process.argv);
+require('./../lib/cli').interpret(process.argv);
