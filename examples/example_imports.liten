@@ -1,0 +1,5 @@
+@import "mixins"
+
+html
+  +bold("foobar1")
+  +bold("foobar2")
