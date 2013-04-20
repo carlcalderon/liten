@@ -4,8 +4,6 @@ A HTML pre-processor with a sassy flavor.
 
 ## Installation
 
-**TBD**
-
 liten is available from the node package manager (npm).
 
     npm install -g liten
