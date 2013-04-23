@@ -13,7 +13,7 @@ html
     body
 
         ```
-        <php
+        <?php
             echo $title;
         ?>
         ```
