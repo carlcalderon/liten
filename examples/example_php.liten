@@ -1,0 +1,19 @@
+<?php
+
+    $title = 'PHP variable content'
+
+?>
+<!doctype html>
+html
+    
+    head
+
+        title:"<?=$title?>"
+
+    body
+
+        ```
+        <?php
+            echo $title;
+        ?>
+        ```

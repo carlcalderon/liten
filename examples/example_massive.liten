@@ -44,12 +44,10 @@ html#foo@lang="en"
       }
       ```
 
-    script@type="text/javascript" // uncompressed markup (this case JS)
-      ```
-      function foo() {
-        return "bar";
-      }
-      ```
+    script
+      @type = "text/javascript"
+      @src  = "some/file.js"
+
   body
 
     @onload = "init()"
