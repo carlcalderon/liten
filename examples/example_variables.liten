@@ -1,0 +1,16 @@
+$global_variable = "World"
+
+=myMixin($parameter)
+    $a_local_var = "variable from mixin"
+    h1:$parameter
+    h2:"I am from mixin: $global_variable"
+    h3:"I am local: $a_local_var"
+    p
+        h1:"I am also local: $a_local_var"
+
+h1:"I am from global: $global_variable"
+section
+    +myMixin("Hello")
+h2:"I cannot be found: $a_local_var"
+
+
