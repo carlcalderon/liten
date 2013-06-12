@@ -1,13 +1,10 @@
 multipliers are still void tokens
 
 
-output should only indent and row-split if -x flag is set
+output should only indent and row-split if -V flag is set
 
 
 test uncompressed content placements
 
 
 normalize unquotes through mixins
-
-
-variables!!!
