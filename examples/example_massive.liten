@@ -73,3 +73,11 @@ html#foo@lang="en"
       +portfolioFigure("Lorem", "path/to/image1.png")
       +portfolioFigure("Ipsum", "path/to/image2.png")
       +portfolioFigure("Dolor", "path/to/image3.png")
+
+    section#tests
+
+      p:"Inline content"
+      p
+        :"Multi
+        line
+        content"
