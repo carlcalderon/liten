@@ -1,0 +1,66 @@
+$PAGE_TITLE = "liten"
+
+html
+
+  head
+
+    title: $PAGE_TITLE
+
+    meta @name="charset" @value="utf-8"
+
+    link
+      @rel="stylesheet"
+      @href="style.css"
+    link
+      @rel="stylesheet"
+      @href="http://yandex.st/highlightjs/7.3/styles/googlecode.min.css"
+    link
+      @rel="stylesheet"
+      @type="text/css"
+      @href="http://fonts.googleapis.com/css?family=Droid+Sans+Mono"
+
+    script@src="http://yandex.st/highlightjs/7.3/highlight.min.js"
+    script@src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"
+
+    script
+      @type="text/javascript"
+      ```
+      $(document).ready(function() {
+        $('pre code').each(function(i, e) {hljs.highlightBlock(e)});
+      });
+      ```
+
+  body
+    nav#menu
+      ul
+        li / a@href="#": "Introduction"
+        li / a@href="#": "Documentation"
+        li / a@href="#": "About"
+    section#content
+      h1:"liten"
+      p
+        :"Need better structure of your HTML? You've found the right place!"
+
+      p
+        :"liten is a small (liten in Swedish) but powerful HTML pre-processor running in node.js. Packed with features such as imports, variables and mixins!"
+
+      pre
+        code.coffeescript
+          ```
+          html
+            body
+              h1: "Hello World!"
+              a: "Go to liten on GitHub"
+                @href = "https://github.com/carlcalderon/liten"
+
+          ```
+      pre
+        code.html
+          ```
+          &lt;html&gt;
+            &lt;body&gt;
+              &lt;h1&gt;Hello World!&lt;/h1&gt;
+              &lt;a href="https://github.com/carlcalderon/liten"&gt;Go to liten on GitHub&lt;/a&gt;
+            &lt;/body&gt;
+          &lt;/html&gt;
+          ```
