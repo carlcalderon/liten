@@ -1,0 +1,9 @@
+canvas @width = 128 @height = 128
+
+canvas@width=256@height=256
+
+canvas
+  @width=512
+  @height=512
+
+div@contenteditable

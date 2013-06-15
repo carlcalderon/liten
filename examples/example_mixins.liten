@@ -1,0 +1,24 @@
+@mixin makeBold($text)
+  strong:"$text"
+
+=makeItalic($text)
+  italic:"$text"
+
+=complexImage($url, $title, $id)
+  figure
+    img
+      @src = "$url"
+      @alt = "$title"
+    figurecaption
+      :"$title and $id"
+
+@include makeBold("I'm bold!1")
+@include makeBold("I'm bold!2")
++makeBold("I'm bold too!2")
+
++makeItalic("I'm italic!")
+
+secion#myComplexImages
+  +complexImage("img/puppy.jpg", "A Puppy", "the-puppy-image")
+  +complexImage("img/cat.jpg", "A Cat", "the-cat-image")
+  +complexImage("img/lizard.jpg", "A Lizard", "the-lizard-image")

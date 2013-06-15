@@ -1,0 +1,4 @@
+section#my-section
+  h1#my-big-headline
+
+canvas@id="painting"
