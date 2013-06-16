@@ -2,7 +2,7 @@
   strong:"$text"
 
 =makeItalic($text)
-  italic:"$text"
+  i:"$text"
 
 =complexImage($url, $title, $id)
   figure
@@ -10,15 +10,19 @@
       @src = "$url"
       @alt = "$title"
     figurecaption
-      :"$title and $id"
+      :"$title with id: $id"
 
-@include makeBold("I'm bold!1")
-@include makeBold("I'm bold!2")
-+makeBold("I'm bold too!2")
+=litenSupportsParameterDefaultsToo($myParam="My Default")
+  p:"$myParam"
+
++makeBold("I'm bold too!")
+@include makeBold("I'm bold!")
 
 +makeItalic("I'm italic!")
 
-secion#myComplexImages
+section#myComplexImages
   +complexImage("img/puppy.jpg", "A Puppy", "the-puppy-image")
   +complexImage("img/cat.jpg", "A Cat", "the-cat-image")
   +complexImage("img/lizard.jpg", "A Lizard", "the-lizard-image")
+
++litenSupportsParameterDefaultsToo()
