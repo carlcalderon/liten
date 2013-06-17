@@ -7,6 +7,22 @@
             box-sizing: border-box;
 }
 
+a, a:visited {
+    color: #666;
+    text-decoration: none;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(102, 102, 102, 0.0);
+    -webkit-transition: all 0.3s;
+       -moz-transition: all 0.3s;
+         -o-transition: all 0.3s;
+            transition: all 0.3s;
+}
+a:hover {
+    color: #444;
+    padding-bottom: 0px;
+    border-bottom: 1px solid #c262a9;
+}
+
 body {
     background: white;
     color: #212121;
@@ -22,7 +38,7 @@ body {
     }
 
     body p {
-        line-height: 30px;
+        line-height: 20px;
         margin: 20px auto;
     }
 
@@ -37,7 +53,8 @@ nav#menu {
 
     nav#menu ul {
         height: 40px;
-        width: 800px;
+        width: 80%;
+        max-width: 800px;
         list-style: none;
         margin: 10px auto;
     }
@@ -50,10 +67,18 @@ nav#menu {
 
 section#content {
     margin: 100px auto;
-    width: 800px;
+    width: 80%;
+    max-width: 800px;
 }
 
 pre code {
     font-family: 'Droid Sans Mono', sans-serif;
     font-size: 12px;
+}
+
+.code-label {
+    font-size: 10px;
+    width: 100%;
+    border-top: 1px solid #eeeeee;
+    color: #dadada;
 }
