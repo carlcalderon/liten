@@ -2,12 +2,14 @@
 <html>
   <head>
     <title>liten</title>
-    <meta name="charset" value="utf-8"/>
-    <link rel="stylesheet" href="style.css"></link>
-    <link rel="stylesheet" href="http://yandex.st/highlightjs/7.3/styles/googlecode.min.css"></link>
-    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Droid+Sans+Mono"></link>
+    <meta name="charset" value="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="http://yandex.st/highlightjs/7.3/styles/googlecode.min.css">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Droid+Sans+Mono">
     <script src="http://yandex.st/highlightjs/7.3/highlight.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+    <script src="bundle.js"></script>
+    <script src="script.js"></script>
     <script type="text/javascript">
       $(document).ready(function() {
         $('pre code').each(function(i, e) {hljs.highlightBlock(e)});
@@ -33,36 +35,43 @@
           <a href="#introduction">Introduction</a>
         </li>
         <li>
+          <a href="#try">Try liten Live</a>
+        </li>
+        <li>
           <a href="https://github.com/carlcalderon/liten/wiki">Documentation</a>
         </li>
       </ul>
     </nav>
+    <section id="try">
+      <textarea id="source" spellcheck="false">asdf</textarea>
+      <pre>
+        <code id="output">asdf</code>
+      </pre>
+    </section>
     <section id="content">
       <h1>liten</h1>
-      <p>Need better structure of your HTML? You've come to the right place!</p>
+      <p>Need better structure for your HTML? You've come to the right place!</p>
       <p>liten is a small (liten in Swedish) but powerful HTML pre-processor 
         running in node.js. Packed with features such as imports, variables 
         and mixins!</p>
       <div class="code-label">liten:</div>
       <pre>
-        <code class="coffeescript">
-          html
-            body
-              h1: "Hello World!"
-              a: "Go to liten on GitHub"
-                @href = "https://github.com/carlcalderon/liten"
-        </code>
+        <code class="coffeescript">html
+  body
+    h1: "Hello World!"
+    a: "Go to liten on GitHub"
+      @href = "https://github.com/carlcalderon/liten"
+          </code>
       </pre>
       <div class="code-label">output:</div>
       <pre>
-        <code class="html">
-          &lt;html&gt;
-            &lt;body&gt;
-              &lt;h1&gt;Hello World!&lt;/h1&gt;
-              &lt;a href="https://github.com/carlcalderon/liten"&gt;Go to liten on GitHub&lt;/a&gt;
-            &lt;/body&gt;
-          &lt;/html&gt;
-        </code>
+        <code class="html">&lt;html&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Hello World!&lt;/h1&gt;
+    &lt;a href="https://github.com/carlcalderon/liten"&gt;Go to liten on GitHub&lt;/a&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+          </code>
       </pre>
       <section id="introduction">
         <h2>Introduction</h2>
@@ -74,32 +83,30 @@
           be a Tag.</p>
         <div class="code-label">liten:</div>
         <pre>
-          <code class="coffeescript">
-            html
-              body
-                header
-                  nav
-                    ul
-                      li
-                footer
-          </code>
+          <code class="coffeescript">html
+  body
+    header
+      nav
+        ul
+          li
+    footer
+            </code>
         </pre>
         <div class="code-label">output:</div>
         <pre>
-          <code class="html">
-            &lt;html&gt;
-              &lt;body&gt;
-                &lt;header&gt;
-                  &lt;nav&gt;
-                    &lt;ul&gt;
-                      &lt;li/&gt;
-                    &lt;/ul&gt;
-                  &lt;/nav&gt;
-                &lt;/header&gt;
-                &lt;footer/&gt;
-              &lt;/body&gt;
-            &lt;/html&gt;
-          </code>
+          <code class="html">&lt;html&gt;
+  &lt;body&gt;
+    &lt;header&gt;
+      &lt;nav&gt;
+        &lt;ul&gt;
+          &lt;li&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/nav&gt;
+    &lt;/header&gt;
+    &lt;footer&gt;&lt;/footer&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+            </code>
         </pre>
         <h3>Attributes, content, ID's and classes</h3>
         <p>What would HTML be without the properties? You know, classes, widths
@@ -107,38 +114,36 @@
           it wasn't easy it wouldn't be liten.</p>
         <div class="code-label">liten:</div>
         <pre>
-          <code class="coffeescript">
-            html
-              body
-                header
-                  nav#main-navigation
-                    ul
-                      li \ a @href = "#home" :"Home"
-                      li \ a @href = "#portfolio" :"Portfolio"
-                footer.fix-at-bottom
-          </code>
+          <code class="coffeescript">html
+  body
+    header
+      nav#main-navigation
+        ul
+          li \ a @href = "#home" :"Home"
+          li \ a @href = "#portfolio" :"Portfolio"
+    footer.fix-at-bottom
+            </code>
         </pre>
         <div class="code-label">output:</div>
         <pre>
-          <code class="html">
-            &lt;html&gt;
-              &lt;body&gt;
-                &lt;header&gt;
-                  &lt;nav id="main-navigation"&gt;
-                    &lt;ul&gt;
-                      &lt;li&gt;
-                        &lt;a href="#home"&gt;Home&lt;/a&gt;
-                      &lt;/li&gt;
-                      &lt;li&gt;
-                        &lt;a href="#portfolio"&gt;Portfolio&lt;/a&gt;
-                      &lt;/li&gt;
-                    &lt;/ul&gt;
-                  &lt;/nav&gt;
-                &lt;/header&gt;
-                &lt;footer class="fix-at-bottom"/&gt;
-              &lt;/body&gt;
-            &lt;/html&gt;
-          </code>
+          <code class="html">&lt;html&gt;
+  &lt;body&gt;
+    &lt;header&gt;
+      &lt;nav id="main-navigation"&gt;
+        &lt;ul&gt;
+          &lt;li&gt;
+            &lt;a href="#home"&gt;Home&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+            &lt;a href="#portfolio"&gt;Portfolio&lt;/a&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/nav&gt;
+    &lt;/header&gt;
+    &lt;footer class="fix-at-bottom"&gt;&lt;/footer&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+            </code>
         </pre>
         <h3>- Sold! Now show me the awesome stuff.</h3>
         <p>- Alrighty.</p>
@@ -146,29 +151,27 @@
           <strong>variables</strong> too, right? We've got 'em all!</p>
         <div class="code-label">liten:</div>
         <pre>
-          <code class="coffeescript">
-            @import mySettings
-            @import thatOtherLibrary
+          <code class="coffeescript">@import mySettings
+@import thatOtherLibrary
 
-            $highfive = "_o/\o_"
+&dollar;highfive = "_o/\o_"
 
-            @mixin makeThisLookCool($text)
-              strong.blink.huge.unicorn
-                :$text
+@mixin makeThisLookCool(&dollar;text)
+  strong.blink.huge.unicorn
+    :&dollar;text
 
-            +makeThisLookCool("Hello")
-            +makeThisLookCool("World")
++makeThisLookCool("Hello")
++makeThisLookCool("World")
 
-            div:"$highfive, alright!"
-          </code>
+div:"&dollar;highfive, alright!"
+            </code>
         </pre>
         <div class="code-label">output:</div>
         <pre>
-          <code class="html">
-            &lt;strong class="blink huge unicorn"&gt;Hello&lt;/strong&gt;
-            &lt;strong class="blink huge unicorn"&gt;World&lt;/strong&gt;
-            &lt;div&gt;_o/\o_, alright!&lt;/div&gt;
-          </code>
+          <code class="html">&lt;strong class="blink huge unicorn"&gt;Hello&lt;/strong&gt;
+&lt;strong class="blink huge unicorn"&gt;World&lt;/strong&gt;
+&lt;div&gt;_o/\o_, alright!&lt;/div&gt;
+            </code>
         </pre>
       </section>
     </section>

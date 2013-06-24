@@ -6,6 +6,9 @@
          -o-box-sizing: border-box;
             box-sizing: border-box;
 }
+.hidden {
+    display: none;
+}
 
 a, a:visited {
     color: #666;
@@ -65,13 +68,52 @@ nav#menu {
             display: inline-block;
         }
 
+section#try {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 10%;
+}
+
+    section#try #source {
+        display: block;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        border: 1px solid #eeeeee;
+        background: rgba(255, 255, 255, 0.91);
+        width: 50%;
+        height: 100%;
+        padding: 15px;
+        text-align: start;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+    }
+
+        section#try #source:focus {
+            outline: none;
+        }
+
+    section#try #output {
+        display: block;
+        position: absolute;
+        border: 1px solid #eeeeee;
+        width: 50%;
+        height: 100%;
+        left: 50%;
+        top: 0px;
+        padding: 15px;
+        background: rgba(255, 255, 255, 0.91);
+        white-space: pre-wrap;
+    }
+
 section#content {
     margin: 100px auto;
     width: 80%;
     max-width: 800px;
 }
 
-pre code {
+pre code, section#try #source, section#try #output {
     font-family: 'Droid Sans Mono', sans-serif;
     font-size: 12px;
 }
@@ -81,4 +123,8 @@ pre code {
     width: 100%;
     border-top: 1px solid #eeeeee;
     color: #dadada;
+}
+
+.coffeescript {
+    cursor: pointer;
 }

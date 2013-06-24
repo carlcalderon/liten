@@ -20,6 +20,8 @@ html
 
     script@src="http://yandex.st/highlightjs/7.3/highlight.min.js"
     script@src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"
+    script@src="bundle.js"
+    script@src="script.js"
 
     script
       @type="text/javascript"
@@ -50,11 +52,19 @@ html
     nav#menu
       ul
         li \ a@href="#introduction": "Introduction"
+        li \ a@href="#try": "Try liten Live"
         li \ a@href="https://github.com/carlcalderon/liten/wiki": "Documentation"
+
+    section#try//.hidden
+      textarea#source:"asdf"
+        @spellcheck="false"
+      pre
+        code#output:"asdf"
+
     section#content
       h1:"liten"
       p
-        :"Need better structure of your HTML? You've come to the right place!"
+        :"Need better structure for your HTML? You've come to the right place!"
 
       p
         :"liten is a small (liten in Swedish) but powerful HTML pre-processor 
@@ -64,24 +74,24 @@ html
       div.code-label:"liten:"
       pre
         code.coffeescript
-          ```
-          html
-            body
-              h1: "Hello World!"
-              a: "Go to liten on GitHub"
-                @href = "https://github.com/carlcalderon/liten"
-          ```
+          :'
+html
+  body
+    h1: "Hello World!"
+    a: "Go to liten on GitHub"
+      @href = "https://github.com/carlcalderon/liten"
+          '
       div.code-label:"output:"
       pre
         code.html
-          ```
-          &lt;html&gt;
-            &lt;body&gt;
-              &lt;h1&gt;Hello World!&lt;/h1&gt;
-              &lt;a href="https://github.com/carlcalderon/liten"&gt;Go to liten on GitHub&lt;/a&gt;
-            &lt;/body&gt;
-          &lt;/html&gt;
-          ```
+          :'
+&lt;html&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Hello World!&lt;/h1&gt;
+    &lt;a href="https://github.com/carlcalderon/liten"&gt;Go to liten on GitHub&lt;/a&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+          '
       section#introduction
         h2:"Introduction"
         p
@@ -97,32 +107,32 @@ html
         div.code-label:"liten:"
         pre
           code.coffeescript
-            ```
-            html
-              body
-                header
-                  nav
-                    ul
-                      li
-                footer
-            ```
+            :'
+html
+  body
+    header
+      nav
+        ul
+          li
+    footer
+            '
         div.code-label:"output:"
         pre
           code.html
-            ```
-            &lt;html&gt;
-              &lt;body&gt;
-                &lt;header&gt;
-                  &lt;nav&gt;
-                    &lt;ul&gt;
-                      &lt;li/&gt;
-                    &lt;/ul&gt;
-                  &lt;/nav&gt;
-                &lt;/header&gt;
-                &lt;footer/&gt;
-              &lt;/body&gt;
-            &lt;/html&gt;
-            ```
+            :'
+&lt;html&gt;
+  &lt;body&gt;
+    &lt;header&gt;
+      &lt;nav&gt;
+        &lt;ul&gt;
+          &lt;li&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/nav&gt;
+    &lt;/header&gt;
+    &lt;footer&gt;&lt;/footer&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+            '
 
         h3:"Attributes, content, ID's and classes"
         p
@@ -133,38 +143,38 @@ html
         div.code-label:"liten:"
         pre
           code.coffeescript
-            ```
-            html
-              body
-                header
-                  nav#main-navigation
-                    ul
-                      li \ a @href = "#home" :"Home"
-                      li \ a @href = "#portfolio" :"Portfolio"
-                footer.fix-at-bottom
-            ```
+            :'
+html
+  body
+    header
+      nav#main-navigation
+        ul
+          li \ a @href = "#home" :"Home"
+          li \ a @href = "#portfolio" :"Portfolio"
+    footer.fix-at-bottom
+            '
         div.code-label:"output:"
         pre
           code.html
-            ```
-            &lt;html&gt;
-              &lt;body&gt;
-                &lt;header&gt;
-                  &lt;nav id="main-navigation"&gt;
-                    &lt;ul&gt;
-                      &lt;li&gt;
-                        &lt;a href="#home"&gt;Home&lt;/a&gt;
-                      &lt;/li&gt;
-                      &lt;li&gt;
-                        &lt;a href="#portfolio"&gt;Portfolio&lt;/a&gt;
-                      &lt;/li&gt;
-                    &lt;/ul&gt;
-                  &lt;/nav&gt;
-                &lt;/header&gt;
-                &lt;footer class="fix-at-bottom"/&gt;
-              &lt;/body&gt;
-            &lt;/html&gt;
-            ```
+            :'
+&lt;html&gt;
+  &lt;body&gt;
+    &lt;header&gt;
+      &lt;nav id="main-navigation"&gt;
+        &lt;ul&gt;
+          &lt;li&gt;
+            &lt;a href="#home"&gt;Home&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+            &lt;a href="#portfolio"&gt;Portfolio&lt;/a&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/nav&gt;
+    &lt;/header&gt;
+    &lt;footer class="fix-at-bottom"&gt;&lt;/footer&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+            '
         h3:"- Sold! Now show me the awesome stuff."
         p
           :"- Alrighty."
@@ -175,27 +185,27 @@ html
         div.code-label:"liten:"
         pre
           code.coffeescript
-            ```
-            @import mySettings
-            @import thatOtherLibrary
+            :'
+@import mySettings
+@import thatOtherLibrary
 
-            $highfive = "_o/\o_"
+&dollar;highfive = "_o/\o_"
 
-            @mixin makeThisLookCool($text)
-              strong.blink.huge.unicorn
-                :$text
+@mixin makeThisLookCool(&dollar;text)
+  strong.blink.huge.unicorn
+    :&dollar;text
 
-            +makeThisLookCool("Hello")
-            +makeThisLookCool("World")
++makeThisLookCool("Hello")
++makeThisLookCool("World")
 
-            div:"$highfive, alright!"
-            ```
+div:"&dollar;highfive, alright!"
+            '
         
         div.code-label:"output:"
         pre
           code.html
-            ```
-            &lt;strong class="blink huge unicorn"&gt;Hello&lt;/strong&gt;
-            &lt;strong class="blink huge unicorn"&gt;World&lt;/strong&gt;
-            &lt;div&gt;_o/\o_, alright!&lt;/div&gt;
-            ```
+            :'
+&lt;strong class="blink huge unicorn"&gt;Hello&lt;/strong&gt;
+&lt;strong class="blink huge unicorn"&gt;World&lt;/strong&gt;
+&lt;div&gt;_o/\o_, alright!&lt;/div&gt;
+            '
