@@ -55,7 +55,8 @@ html
         li \ a@href="#try": "Try liten Live"
         li \ a@href="https://github.com/carlcalderon/liten/wiki": "Documentation"
 
-    section#try//.hidden
+    section#try.hidden
+      div#error
       textarea#source:"asdf"
         @spellcheck="false"
       pre

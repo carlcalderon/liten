@@ -14,15 +14,27 @@ $(function () {
         compile();
     });
 
+    function showError(message, autohide) {
+        $('#error').text(message);
+        $('#error').show();
+    }
+
     function compile() {
+        $('#error').hide();
         console.error = function(msg) {
-            console.log('error', msg);
+            showError(msg);
         }
         var process = {};
         process.exit = function (code) {
             console.log('exit code: ' + code);
         }
-        $('#output').text(liten.compile($('#source').val()));
+        try {
+            $('#output').text(liten.compile($('#source').val()));
+        } catch (e) {
+            if (/existsSync/g.test(e.message)) {
+                showError('@import does not work in the online editor.');
+            }
+        }
         hljs.highlightBlock($('#output').get(0));
         hljs.highlightBlock($('#source').get(0));
     };

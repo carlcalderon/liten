@@ -75,6 +75,19 @@ section#try {
     top: 10%;
 }
 
+    section#try #error {
+        display: block;
+        position: fixed;
+        bottom: 0px;
+        width: 50%;
+        height: 47px;
+        padding: 15px;
+        background: #961a20;
+        color: #ed9198;
+        z-index: 2;
+        opacity: 0.95;
+    }
+
     section#try #source {
         display: block;
         position: absolute;
@@ -113,7 +126,7 @@ section#content {
     max-width: 800px;
 }
 
-pre code, section#try #source, section#try #output {
+pre code, section#try #source, section#try #output, section#try #error {
     font-family: 'Droid Sans Mono', sans-serif;
     font-size: 12px;
 }
