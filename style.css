@@ -68,11 +68,15 @@ nav#menu {
             display: inline-block;
         }
 
+            nav#menu ul li a:active {
+                font-weight: bold;
+            }
+
 section#try {
     width: 100%;
     height: 100%;
     position: fixed;
-    top: 10%;
+    top: 0px;
 }
 
     section#try #error {
@@ -87,6 +91,30 @@ section#try {
         z-index: 2;
         opacity: 0.95;
     }
+    
+    section#try h2 {
+        position: absolute;
+        z-index: 2;
+        margin: 15px;
+        margin-top: 50px;
+    }
+
+    section#try h2.source {
+        left: 0px;
+    }
+
+    section#try h2.result {
+        left: 50%;
+    }
+
+    section#try div#info {
+        position: absolute;
+        top: 15px;
+        font-size: 0.85rem;
+        color: gray;
+        left: 15px;
+        z-index: 3;
+    }
 
     section#try #source {
         display: block;
@@ -98,6 +126,7 @@ section#try {
         width: 50%;
         height: 100%;
         padding: 15px;
+        padding-top: 90px;
         text-align: start;
         white-space: pre-wrap;
         word-wrap: break-word;
@@ -116,6 +145,7 @@ section#try {
         left: 50%;
         top: 0px;
         padding: 15px;
+        padding-top: 90px;
         background: rgba(255, 255, 255, 0.91);
         white-space: pre-wrap;
     }

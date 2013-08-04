@@ -5,6 +5,10 @@ $(function () {
         e.preventDefault();
         $('#try').toggleClass('hidden');
 
+        if ($('#try').hasClass('hidden') == false) {
+            $('#try #info').delay(2000).fadeOut(1000);
+        } else $('#try #info').show();
+
         return false;
 
     });
@@ -12,6 +16,10 @@ $(function () {
     $('#source').val('html\n  head\n    title :"Try liten!"\n  body\n    div');
     $('#source').on('keyup', function () {
         compile();
+    });
+
+    $('body').mousemove(function () {
+        $('#try #info').show().delay(2000).fadeOut(1000);
     });
 
     function showError(message, autohide) {

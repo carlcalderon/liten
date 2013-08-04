@@ -56,9 +56,12 @@ html
         li \ a@href="https://github.com/carlcalderon/liten/wiki": "Documentation"
 
     section#try.hidden
-      div#error
+      div#error:"error content"
+      div#info:"Press ESC to close."
+      h2.source:"Source:"
       textarea#source:"asdf"
         @spellcheck="false"
+      h2.result:"Result:"
       pre
         code#output:"asdf"
 
