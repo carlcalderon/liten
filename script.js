@@ -1,13 +1,13 @@
 $(function () {
 
+    var timeout = null;
+
     $('a[href="#try"]').click(function (e) {
 
         e.preventDefault();
         $('#try').toggleClass('hidden');
 
-        if ($('#try').hasClass('hidden') == false) {
-            $('#try #info').delay(2000).fadeOut(1000);
-        } else $('#try #info').show();
+        showInfoMessage();
 
         return false;
 
@@ -18,13 +18,25 @@ $(function () {
         compile();
     });
 
-    $('body').mousemove(function () {
-        $('#try #info').show().delay(2000).fadeOut(1000);
+    $('body').mousemove(showInfoMessage);
+    $(document).keyup(function(e){
+
+        if(e.keyCode === 27)
+            $('#try').addClass('hidden');
+
     });
 
     function showError(message, autohide) {
         $('#error').text(message);
         $('#error').show();
+    }
+
+    function showInfoMessage() {
+        clearTimeout(timeout);
+        $('#try #info').show();
+        timeout = setTimeout(function () {
+            $('#try #info').fadeOut();
+        }, 2000);
     }
 
     function compile() {
