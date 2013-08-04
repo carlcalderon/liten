@@ -1,9 +1,40 @@
-canvas @width = 128 @height = 128
+/*
+  
+  All parameters such as attributes, ids and classes
+  can either be placed on the same row as the tag or
+  on a line below with a +1 indent.
+
+  Attributes are set using the @ prefix like so:
+
+  <tag>@<attribute>[ = <value>]
+
+  eg.
+  input@type = "password"
+
+*/
+
+
+// -------------------------------------------------
+// one line
 
 canvas@width=256@height=256
 
+
+// -------------------------------------------------
+// with spacing
+
+canvas @width = 128 @height = 128
+
+// -------------------------------------------------
+// multiple lines
+
 canvas
-  @width=512
-  @height=512
+  @width  = 512
+  @height = 512
+
+
+// -------------------------------------------------
+// attributes without a value will automatically be
+// set to "true" per W3-specs
 
 div@contenteditable

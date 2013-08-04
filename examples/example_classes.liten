@@ -1,4 +1,25 @@
+/*
+  
+  All parameters such as attributes, ids and classes
+  can either be placed on the same row as the tag or
+  on a line below with a +1 indent.
+
+  Classes are set using the . prefix like so:
+
+  <tag>.<class>
+
+  eg.
+  div.sidebar
+
+*/
+
+// -------------------------------------------------
+
 section.main-content
+
   h1.big-headline
+
+
+// -------------------------------------------------
 
 div@class="this-works-too"

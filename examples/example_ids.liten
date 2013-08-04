@@ -1,4 +1,25 @@
-section#my-section
-  h1#my-big-headline
+/*
+  
+  All parameters such as attributes, ids and classes
+  can either be placed on the same row as the tag or
+  on a line below with a +1 indent.
+
+  IDs are set using the # prefix like so:
+
+  <tag>#<id>
+
+  eg.
+  content#main
+
+*/
+
+// -------------------------------------------------
+
+section#main
+  h1#big-headline
+
+// -------------------------------------------------
+// of course you may set ids using regular
+// attributes (@)
 
 canvas@id="painting"
