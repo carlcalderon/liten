@@ -1,17 +1,20 @@
 <?php
 
-    $title = 'PHP variable content'
+    $title = 'PHP variable title';
+    $body = 'PHP variable body';
 
 ?>
 <!doctype html>
 html
-    
+
     head
 
-        title:"<?=$title?>"
+        title:"This will be interpreted as liten string even though it's php markup<?=$title?>"
 
     body
 
         <?php
             echo $title;
         ?>
+
+        p:<?=$body?>
