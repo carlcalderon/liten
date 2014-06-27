@@ -1,5 +1,5 @@
 ###OSX###
- 
+
 .DS_Store
 
 # Thumbnails
@@ -11,7 +11,7 @@
 
 
 ###Node###
- 
+
 lib-cov
 *.seed
 *.log
@@ -26,5 +26,7 @@ logs
 results
 
 npm-debug.log
+
+node_modules
 
 
