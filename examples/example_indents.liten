@@ -1,0 +1,12 @@
+// indentation example
+
+section
+  #main
+  h1#foo
+    :"bar"
+    .baz
+    
+    
+
+    
+footer:"end"
