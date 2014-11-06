@@ -66,8 +66,9 @@ html#foo@lang="en"
 
       // DOM multiplier and inline terminator breaks
 
-      figure * 3 \ p:"testing lines"
-        @contenteditable
+      %for $i from 1 to 100
+        figure \ p:"testing lines"
+          @contenteditable
 
     section#portfolio
       +portfolioFigure("Lorem", "path/to/image1.png")
