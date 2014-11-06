@@ -1,2 +1,8 @@
 %for $i from 1 to 100
   i: $i
+
+$a = 10
+$b = 1000
+
+%for $x from $a to $b
+  b: $x
