@@ -1,0 +1,4 @@
+// this will produce an error
+
+h1: "Error"
+  $foo "bar"
