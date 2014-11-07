@@ -1,0 +1,11 @@
+%for $i from 1 to 3
+  i: $i
+
+$a = 10
+$b = 15
+
+h1: $a
+h1: $b
+
+%for $x from $a to $b
+  b: $x
